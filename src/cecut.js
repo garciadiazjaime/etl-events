@@ -22,12 +22,16 @@ const transform = (props, html) => {
     const date = $(element).find('.DateTime').text()
     const description = $(element).find('.des').text()
     const price = $(element).find('.price').text()
+    const uuid = $(element).attr('id')
+    const url = `${props.url}#${uuid}`
     events.push({
       image,
       title,
       date,
       description,
-      price
+      price,
+      uuid,
+      url
     })
   })
   return events
