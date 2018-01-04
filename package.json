@@ -4,12 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "babel": "babel src -d build",
-    "cecut": "node build/cecut"
+    "build": "babel src -d build",
+    "cecut": "node build/cecut",
+    "docker:build": "yarn build && docker build -t garciadiazjaime/etl-events .",
+    "docker:run": "docker run -d -p 49360:80 -e 'API_URL=http://0.0.0.0:3060/' --name events garciadiazjaime/etl-events",
+    "docker:push": "docker push garciadiazjaime/etl-events",
+    "docker:pull": "docker pull garciadiazjaime/etl-events"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "convict": "^4.0.2",
+    "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
