@@ -1,0 +1,19 @@
+{
+  "name": "scrapper-events",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "babel": "babel src -d build",
+    "cecut": "node build/cecut"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "convict": "^4.0.2",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
