@@ -37,8 +37,13 @@ const transform = (props, html) => {
   return events
 };
 
-extract(props)
-  .then(html => transform(props, html))
-  .then(events => load(props, events))
-  .then(printReport)
-  .catch(console.log)
+const main = () => {
+  return extract(props)
+    .then(html => transform(props, html))
+    .then(events => load(props, events))
+    .then(printReport)
+    .catch(console.log)
+}
+
+
+export default main
