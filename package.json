@@ -1,5 +1,5 @@
 {
-  "name": "scrapper-events",
+  "name": "etl-events",
   "version": "1.0.0",
   "main": "dist/cecut",
   "license": "MIT",
