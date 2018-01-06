@@ -1,11 +1,12 @@
 {
   "name": "scrapper-events",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cecut",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d build",
-    "cecut": "node build/cecut",
+    "build": "babel src -d dist",
+    "cecut": "node dist/cecut",
+    "postinstall": "postinstall-build dist",
     "docker:build": "yarn build && docker build -t garciadiazjaime/etl-events .",
     "docker:run": "docker run -d -p 49360:80 -e 'API_URL=http://0.0.0.0:3060/' --name events garciadiazjaime/etl-events",
     "docker:push": "docker push garciadiazjaime/etl-events",
