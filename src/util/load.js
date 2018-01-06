@@ -1,7 +1,6 @@
 import request from 'request-promise-native';
 
 const load = (props, events) => {
-  console.log('url', `${props.apiUrl}events`)
   const options = {
     method: 'POST',
     uri: `${props.apiUrl}events`,
