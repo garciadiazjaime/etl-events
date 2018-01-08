@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "cecut": "node dist/cecut",
+    "start": "node dist/main",
     "postinstall": "postinstall-build dist",
     "docker:build": "yarn build && docker build -t garciadiazjaime/etl-events .",
     "docker:run": "docker run -d -p 49360:80 -e 'API_URL=http://0.0.0.0:3060/' --name events garciadiazjaime/etl-events",
