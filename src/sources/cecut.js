@@ -35,7 +35,7 @@ const pages = [
 
 const props = {
   isProduction: config.get('env') === 'production',
-  imageBaseUrl: 'http://www.cecut.gob.mx',
+  imageBaseUrl: '//www.cecut.gob.mx',
   file: './samples/cecut.html',
   apiUrl: config.get('api.url')
 }

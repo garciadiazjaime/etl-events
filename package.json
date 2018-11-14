@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src -d dist",
-    "cecut": "node dist/cecut",
+    "cecut": "node dist/sources/cecut",
+    "nopal": "node dist/sources/nopal",
     "start": "node dist/main",
     "postinstall": "postinstall-build dist",
     "docker:build": "yarn build && docker build -t garciadiazjaime/etl-events .",

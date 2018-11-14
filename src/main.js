@@ -1,4 +1,4 @@
-import cecutEtl from './cecutEtl'
+import cecutEtl from './sources/cecut'
 
 cecutEtl()
   .then(console.log)

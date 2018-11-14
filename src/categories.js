@@ -4,7 +4,8 @@ const Categories = {
   INFANTILES: 3,
   LITERATURA: 4,
   MUSEO: 5,
-  CINE: 6
+  CINE: 6,
+  MUSICA: 7
 }
 
 export default Categories
