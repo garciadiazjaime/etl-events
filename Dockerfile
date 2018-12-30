@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:carbon
 
 ADD package.json /tmp/package.json
 
@@ -10,6 +10,6 @@ WORKDIR /usr/src/app
 
 ADD . /usr/src/app
 
-EXPOSE 3000
+EXPOSE 3060
 
-CMD [ "npm", "start" ]
+CMD [ "node", "./build/cecut.js" ]

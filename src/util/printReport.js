@@ -1,5 +1,5 @@
-const printReport = results => {
-  console.log(`${results.data} events created`);
-};
+const printReport = (page, results) => results.status ?
+  `${page.url} ${results.data} events created`
+  : `Error: ${JSON.stringify(results.error)}`
 
 export default printReport;

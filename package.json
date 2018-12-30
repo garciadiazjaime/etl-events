@@ -1,15 +1,24 @@
 {
-  "name": "scrapper-events",
+  "name": "etl-events",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/cecut",
   "license": "MIT",
   "scripts": {
-    "babel": "babel src -d build",
-    "cecut": "node build/cecut"
+    "build": "babel src -d dist",
+    "cecut": "node dist/sources/cecut",
+    "nopal": "node dist/sources/nopal",
+    "start": "node dist/main",
+    "postinstall": "postinstall-build dist",
+    "docker:build": "yarn build && docker build -t garciadiazjaime/etl-events .",
+    "docker:run": "docker run -d -p 49360:80 -e 'API_URL=http://0.0.0.0:3060/' --name events garciadiazjaime/etl-events",
+    "docker:push": "docker push garciadiazjaime/etl-events",
+    "docker:pull": "docker pull garciadiazjaime/etl-events"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "convict": "^4.0.2",
+    "postinstall-build": "^5.0.1",
+    "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
