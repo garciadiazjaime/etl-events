@@ -5,4 +5,4 @@
 ## Run project:
 a) Install Dependencies
 
-`yarn`
+`npm i`
